@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-family: "Geist", sans-serif;
+}
+
+@layer base {
+  :root {
+    /* Base colors - backgrounds and surfaces (unchanged dark theme) */
+    --color-bg-primary: rgb(9 9 11);        /* Main background */
+    --color-bg-secondary: rgb(29 28 30);    /* Cards/sections */
+    --color-bg-tertiary: rgb(22 21 23);     /* Elevated elements */
+    
+    /* Text colors */
+    --color-text-primary: rgb(235 240 255);     /* Slightly cooler white */
+    --color-text-secondary: rgb(210 220 235);   /* Cool gray */
+    --color-text-muted: rgb(170 180 195);       /* Muted blue-gray */
+    
+    /* Primary accent (soft blue) */
+    --color-primary: rgb(96 165 250);           /* Main accent (blue-400) */
+    --color-primary-hover: rgb(129 180 255);    /* Hover */
+    --color-primary-active: rgb(59 130 246);    /* Active (blue-500) */
+    
+    /* Secondary accent (deep navy blue) */
+    --color-secondary: rgb(30 58 138);          /* Blue-900 */
+    --color-secondary-hover: rgb(37 99 235);    /* Blue-600 */
+    
+    /* Accent (blue-purple, subtle) */
+    --color-accent: rgb(99 102 241);            /* Indigo-500 */
+    --color-accent-hover: rgb(129 140 248);     /* Indigo-400 */
+    
+    /* Neutral - borders & subtle highlights (cooler tone) */
+    --color-neutral: rgb(40 48 60);
+    --color-neutral-light: rgb(64 74 90);
+    
+    /* Semantic colors */
+    --color-info: rgb(103 198 255);
+    --color-success: rgb(74 222 128);           /* green-400 */
+    --color-warning: rgb(251 191 36);           /* amber-400 */
+    --color-error: rgb(248 113 113);            /* red-400 */
+    
+    /* Border and divider colors */
+    --color-border: rgb(50 55 65);
+    --color-divider: rgb(70 75 90);
+    
+    /* Interactive states */
+    --color-hover-bg: rgb(30 34 42);             /* Slight blue tint */
+    --color-active-bg: rgb(24 28 36);
+    
+    /* Radii */
+    --radius-sm: 0.5rem;
+    --radius-md: 1rem;
+    --radius-lg: 2rem;
+    --radius-full: 9999px;
+  }
+  
+  html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+  }
+
+  body,
+  #root {
+    font-family: var(--font-family);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    min-height: 100%;
+  }
+}
+
+/* Tailwind utilities using CSS variables */
+@layer utilities {
+  .bg-primary { background-color: var(--color-bg-primary); }
+  .bg-secondary { background-color: var(--color-bg-secondary); }
+  .bg-tertiary { background-color: var(--color-bg-tertiary); }
+  .bg-hover { background-color: var(--color-hover-bg); }
+  
+  .text-primary { color: var(--color-text-primary); }
+  .text-secondary { color: var(--color-text-secondary); }
+  .text-muted { color: var(--color-text-muted); }
+  
+  .text-accent-primary { color: var(--color-primary); }
+  .text-accent-secondary { color: var(--color-secondary); }
+  .text-accent { color: var(--color-accent); }
+  
+  .bg-accent-primary { background-color: var(--color-primary); }
+  .bg-accent-secondary { background-color: var(--color-secondary); }
+  .bg-neutral { background-color: var(--color-neutral-light); }
+  
+  .border-default { border-color: var(--color-border); }
+  .border-accent-primary { border-color: var(--color-primary); }
+  .border-divider { border-color: var(--color-divider); }
+  
+  .text-info { color: var(--color-info); }
+  .text-success { color: var(--color-success); }
+  .text-warning { color: var(--color-warning); }
+  .text-error { color: var(--color-error); }
+  
+  .hover-text-primary:hover { color: var(--color-text-primary); }
+  .hover-bg-primary:hover { background-color: var(--color-primary); }
+  .hover-bg-hover:hover { background-color: var(--color-hover-bg); }
+}
