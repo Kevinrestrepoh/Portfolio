@@ -16,7 +16,7 @@ const experiences: Experience[] = [
     id: 'exp-1',
     title: 'Backend & DevOps Engineer',
     company: 'EcoDrive (ITM University)',
-    period: 'JUN 2025 - PRESENT',
+    period: 'MAY 2025 - PRESENT',
     description: '',
     details: [
       'Designed and developed scalable backend services in Go, optimizing 40+ API endpoints and reducing database load by 60–70% using Redis-based caching.',
@@ -62,7 +62,7 @@ export const ExperiencesSection: React.FC = () => {
             <span className="flex-1 h-px bg-neutral"></span>
           </h2>
         </ScrollReveal>
-        
+
         <div className="grid md:grid-cols-[200px_1fr] gap-8">
           {/* Experience List */}
           <ScrollReveal delay={0.2}>
@@ -74,8 +74,8 @@ export const ExperiencesSection: React.FC = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ 
-                    duration: 0.5, 
+                  transition={{
+                    duration: 0.5,
                     delay: 0.3 + index * 0.1,
                     ease: [0.16, 1, 0.3, 1]
                   }}
@@ -103,7 +103,7 @@ export const ExperiencesSection: React.FC = () => {
 
           {/* Experience Details */}
           <ScrollReveal delay={0.4}>
-            <div className="space-y-4 min-h-[240px] relative">
+            <div className="space-y-4 min-h-60 relative">
               <AnimatePresence mode="wait">
                 {selectedExperience && (
                   <motion.div
@@ -150,8 +150,8 @@ export const ExperiencesSection: React.FC = () => {
                           key={index}
                           initial={{ opacity: 0, x: -10 }}
                           animate={{ opacity: 1, x: 0 }}
-                          transition={{ 
-                            duration: 0.4, 
+                          transition={{
+                            duration: 0.4,
                             delay: index * 0.1,
                             ease: [0.16, 1, 0.3, 1]
                           }}

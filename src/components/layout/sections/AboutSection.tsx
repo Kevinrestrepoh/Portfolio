@@ -16,7 +16,7 @@ export const AboutSection: React.FC = () => {
             <span className="flex-1 h-px bg-neutral"></span>
           </h2>
         </ScrollReveal>
-        
+
         <div className="grid md:grid-cols-2 gap-12 items-start">
           {/* Text Content */}
           <ScrollReveal delay={0.2}>
@@ -51,7 +51,7 @@ export const AboutSection: React.FC = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="w-full max-w-[280px] rounded-lg overflow-hidden"
+                className="w-full max-w-70 rounded-lg overflow-hidden"
               >
                 <img
                   src={meImage}
