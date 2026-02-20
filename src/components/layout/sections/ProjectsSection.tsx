@@ -22,6 +22,14 @@ const projects: Project[] = [
   },
   {
     id: 'proj-2',
+    title: 'Pulse - Real-Time Event Fanout Engine',
+    description:
+      'Designed and implemented an event-driven WebSocket fanout system in Rust using bounded channels and topic-based routing with priority-aware delivery. Built a deterministic load simulator to validate backpressure handling, slow-consumer drop policies, and observability across 5k concurrent clients.',
+    technologies: ['Rust', 'Tokio', 'Axum', 'WebSockets', 'Distributed Systems'],
+    githubUrl: 'https://github.com/Kevinrestrepoh/Pulse',
+  },
+  {
+    id: 'proj-3',
     title: 'API TUI Client',
     description:
       'Built a Go-based terminal UI (TUI) application for rapid API testing using the Bubble Tea framework. Designed a fast, keyboard-driven interface to send requests, inspect responses, and switch between endpoints directly from the terminal.',
@@ -44,7 +52,7 @@ export const ProjectsSection: React.FC = () => {
             <span className="flex-1 h-px bg-neutral"></span>
           </h2>
         </ScrollReveal>
-        
+
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <ScrollReveal key={project.id} delay={index * 0.2}>
