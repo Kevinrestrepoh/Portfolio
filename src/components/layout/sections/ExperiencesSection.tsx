@@ -19,10 +19,12 @@ const experiences: Experience[] = [
     period: 'MAY 2025 - PRESENT',
     description: '',
     details: [
-      'Designed and developed scalable backend services in Go, optimizing 40+ API endpoints and reducing database load by 60–70% using Redis-based caching.',
-      'Built real-time systems with WebSockets and MQTT, supporting 200+ concurrent users and 1,000+ messages per second for live tracking and trip-state synchronization.',
-      'Deployed and managed services on Kubernetes (k3s) with GitHub Actions and ArgoCD, implementing a GitOps workflow for automated CI/CD, scalability, and reliability.',
-      'Configured networking, persistent storage, resource quotas, and HPA autoscaling to support production workloads on private university servers.',
+      'Led technical direction of a two-person engineering team, making independent architectural decisions across backend and infrastructure with minimal oversight.',
+      'Built the core REST API in Go from scratch, covering auth, data persistence, Redis caching, and metrics across 40+ endpoints — the backbone powering both the mobile app and operations dashboard.',
+      'Boosted real-time user capacity to 200+ concurrent connections and 1,000+ MQTT msgs/sec by implementing a WebSockets + MQTT architecture for live tracking, trip-state syncing, and proximity-based matching.',
+      'Architected Kubernetes infrastructure from scratch, designing networking, persistent storage, service deployment, and cluster components to support scalable backend and real-time services.',
+      'Cut deployment time by 80% by designing and automating a GitOps pipeline with ArgoCD and fully automating CI/CD workflows, eliminating manual steps and enabling continuous delivery across all services.',
+      'Enforced production-grade reliability by configuring HPA autoscaling and resource quotas across k3s services, ensuring stable performance under variable load.',
     ],
   },
   {
